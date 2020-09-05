@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Pop-up Modal</title>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js' defer></script>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <h2>Download File</h2>
+    </div>
+
+    <div class="main">
+        <h1>Password.txt</h1>
+        <h4>Password.txt | 1KB | <img
+                src="https://drive.google.com/uc?export=download&id=1BpK2Td3JWEPHWBx7TMBOIHv7R7sIQEuS" /></h4>
+        <button id="myBtn">Download Now</button>
+    </div>
+
+
+    <div class="footer">
+
+        <div class="entry">
+            <img class="img-fast" src="fast.png" />
+            <span class="mini-title">FAST</span>
+            <p>Automatically replicated to a server near you. Lightning fast download speeds.</p>
+        </div>
+
+        <div class="entry">
+            <img class="img-fast" src="stable.png" />
+            <span class="mini-title">STABLE</span>
+            <p>Stable download platform for all files and services. Download with confidence.</p>
+        </div>
+
+        <div class="entry">
+            <img class="img-fast" src="secure.png" />
+            <span class="mini-title">SECURE</span>
+            <p>Secure protocols and top-of-the-line anti virus software. All files are secured for you.</p>
+        </div>
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Human Verfication Required</h2>
+            </div>
+            <div class="modal-body">
+                <p>Before downloading this file, we need to confirm you are a human. Complete an offer below to
+                    verify
+                    and unlock your download.</p>
+                <p>
+                    <center>
+                        <div>{%header_text%}</div>
+                        <div class="offerlst">
+                            {%offers%}
+                        </div>
+                    </center>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <!-- <h3>Modal Footer</h3> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

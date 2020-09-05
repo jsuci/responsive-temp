@@ -1,0 +1,221 @@
+html, body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+  width: 100%;
+  background: rgb(232, 248, 255);
+}
+
+.main {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header h2 {
+  color: rgb(92, 92, 92);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  padding: 18px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 3.6em;
+  color: #0096ff;
+  font-weight: 600;
+  text-align: center;
+  font-family: monospace;
+  margin-top: 21px;
+  margin-bottom: 3px;
+}
+
+.main h4 {
+  color: #777;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.main img {
+  vertical-align: bottom;
+  width: 24px;
+}
+
+.main button {
+  display: block;
+  margin: 27px auto;
+}
+
+.footer {
+  margin: 3em auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.footer .img-fast {
+  width: 100%;
+  max-width: 90px;
+}
+
+.footer .mini-title {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  padding-top: 12px;
+}
+
+.footer p {
+  color: #777;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 6px;
+}
+
+.footer .entry {
+  padding-top: 15px;
+  text-align: center;
+  width: 270px;
+}
+
+#myBtn {
+    border-radius: 9px;
+    border: 0px;
+    background: #0096ff;
+    color: rgb(235, 235, 235);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 21px;
+}
+
+#myBtn:hover {
+  background: #189fff;
+  color: rgb(255, 255, 255);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+    
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 6em auto;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    
+}
+  
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #d60000;
+  color: white;
+  font-size: 12px;
+  font-weight: 100;
+}
+  
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+}
+  
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #ffffff;
+  color: white;
+}
+
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+  
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.shake-me {
+  animation: 'shake 0.5s';
+  animation-iteration-count: 2;
+}
+
+/* Shake element */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(1deg); }
+  10% { transform: translate(-1px, -2px) rotate(-2deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(1deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-2deg); }
+  60% { transform: translate(-3px, 1px) rotate(1deg); }
+  70% { transform: translate(3px, 1px) rotate(-2deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(1deg); }
+  100% { transform: translate(1px, -2px) rotate(-2deg); }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer .entry {
+    margin: 27px 27px;
+  }
+
+  .modal-content {
+    width: 420px;
+  }
+
+  .main h1 {
+    font-size: 8.1em;
+  }
+
+}
+
+
+@media only screen and (min-width: 420px) and (max-width: 760px) {
+  .main h1 {
+    font-size: 4.5em;
+  }
+}
+  
