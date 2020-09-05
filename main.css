@@ -140,7 +140,8 @@ html, body {
   
 /* Modal Body */
 .modal-body {
-  margin: 2px 16px;
+  margin: 12px 16px;
+  padding: 0px;
 }
   
 /* Modal Footer */
