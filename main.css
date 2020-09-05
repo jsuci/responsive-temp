@@ -133,9 +133,18 @@ html, body {
 .modal-header {
   padding: 2px 16px;
   background-color: #d60000;
+}
+
+.modal-header h2 {
   color: white;
-  font-size: 12px;
-  font-weight: 100;
+  font-size: 21px;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-header .close {
+  margin-top: 12px;
 }
   
 /* Modal Body */
