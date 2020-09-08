@@ -38,5 +38,7 @@ i, .dl_button {
 }
 
 .link_a:hover {
-    background: #207ce5;
+    background: #04101b;
 }
+
+%offers_autoshow%

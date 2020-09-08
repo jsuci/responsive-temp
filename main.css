@@ -26,7 +26,7 @@ html, body {
 }
 
 .main h1 {
-  font-size: 3.6em;
+  font-size: 3.3em;
   color: #0096ff;
   font-weight: 600;
   text-align: center;
@@ -82,9 +82,10 @@ html, body {
 }
 
 .footer .entry {
-  padding-top: 15px;
+  margin-top: 12px;
   text-align: center;
   width: 270px;
+  height: 210px;
 }
 
 #myBtn {
@@ -155,9 +156,17 @@ html, body {
   
 /* Modal Footer */
 .modal-footer {
-  padding: 2px 16px;
+  margin: 3px auto;
   background-color: #ffffff;
-  color: white;
+  color: rgb(88, 88, 88);
+  width: 270px;
+}
+
+.modal-footer p {
+  font-size: 9px;
+  text-align: center;
+  font-weight: 800;
+  padding: 0px 0 15px 0
 }
 
 
@@ -218,6 +227,10 @@ html, body {
 
   .main h1 {
     font-size: 8.1em;
+  }
+
+  .modal-footer {
+    width: 80%;
   }
 
 }
