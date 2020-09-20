@@ -9,7 +9,7 @@ html, body {
   background: rgb(232, 248, 255);
 }
 
-.main {
+.main, .translate {
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -54,7 +54,7 @@ html, body {
 }
 
 .footer {
-  margin: 3em auto;
+  margin-top: 36px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -86,6 +86,15 @@ html, body {
   text-align: center;
   width: 270px;
   height: 210px;
+}
+
+.translate {
+  margin-bottom: 30px;
+
+}
+
+.translate label {
+  font-size: 12px;
 }
 
 #myBtn {
@@ -138,7 +147,7 @@ html, body {
 
 .modal-header h2 {
   color: white;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 300;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -153,19 +162,23 @@ html, body {
   margin: 12px 16px;
   padding: 0px;
 }
+
+.modal-body p {
+  font-size: 12px;
+}
   
 /* Modal Footer */
 .modal-footer {
-  margin: 3px auto;
+  margin: 12px 16px;
+  padding: 0px;
   background-color: #ffffff;
-  color: rgb(88, 88, 88);
-  width: 270px;
+  color: rgb(0, 0, 0);
 }
 
 .modal-footer p {
-  font-size: 9px;
-  text-align: center;
-  font-weight: 800;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 500;
   padding: 0px 0 15px 0
 }
 
@@ -222,16 +235,13 @@ html, body {
   }
 
   .modal-content {
-    width: 420px;
+    width: 480px;
   }
 
   .main h1 {
     font-size: 8.1em;
   }
 
-  .modal-footer {
-    width: 80%;
-  }
 
 }
 

